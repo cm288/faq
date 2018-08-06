@@ -13,7 +13,7 @@
 
                         <button class="btn badge-dark float-right mr-2" value="submit" type="submit" id="submit"> Save
                         </button>
-                       
+
 
 
                         {{ Form::open(['method'  => 'DELETE', 'route' => ['answers.destroy', $question, $answer->id]])}}
