@@ -70,6 +70,7 @@ public function create()
         return view('question')->with('question', $question);
     }
 
+
     /**
      * Show the form for editing the specified resource.
      *

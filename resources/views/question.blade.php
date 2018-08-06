@@ -1,6 +1,9 @@
 @extends('layouts.app')
 
 @section('content')
+
+
+
     <div class="container">
         <div class="row ">
             <div class="col-md-8">
@@ -17,7 +20,7 @@
                         </a>
 
                         {{ Form::open(['method'  => 'DELETE', 'route' => ['questions.destroy', $question->id]])}}
-                        <button class="btn btn-danger float-right mr-2" value="submit" type="submit" id="submit">Delete
+                        <button class="btn btn-danger float-right mr-2" value="submit" type="submit" id="submit" >Delete
                         </button>
                         {!! Form::close() !!}
                     </div>
@@ -39,8 +42,14 @@
 
                                     <a class="btn btn-primary float-right"
                                        href="{{ route('answers.show', ['question_id'=> $question->id,'answer_id' => $answer->id]) }}">
+                                        Save
+                                    </a>
+
+                                    <a class="btn btn-primary float-right"
+                                       href="{{ route('answers.show', ['question_id'=> $question->id,'answer_id' => $answer->id]) }}">
                                         View
                                     </a>
+
 
                                 </div>
                             </div>
