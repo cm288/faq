@@ -29,5 +29,11 @@ class HomeController extends Controller
         return view('home')->with('questions', $questions);
     }
 
+    public function admin_dashboard()
+    {
+        if ((Auth::user()->role) != 'admin') {
+            return redirect()->route('home');
+        }
 
+    }
 }

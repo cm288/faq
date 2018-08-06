@@ -32,8 +32,14 @@ Route::post('/questions/{question_id}/answers/', 'AnswerController@store')->name
 Route::patch('/questions/{question_id}/answer/{answer_id}', 'AnswerController@update')->name('answers.update');
 Route::delete('/questions/{question_id}/answer/{answer_id}', 'AnswerController@destroy')->name('answers.destroy');
 
-
-
+Route::get('/home', 'HomeController@index')->name('home');
+Route::get('/admin', 'HomeController@admin_dashboard')->name('admin');
+Route::get('/superadmin', 'HomeController@superadmin_dashboard')->name('superadmin');
+Route::get('/admin/view_users', 'UserController@index')->name('users');
+Route::get('/admin/view_admins', 'UserController@index_admin')->name('admins');
+Route::get('/admin/view_faqs', 'AdminController@index')->name('faqs');
+Route::post('/admin/update_profile', 'UserController@update');
+Route::get('/admin/{user_id}/delete_user', 'UserController@delete');
 
 Route::resources([
     'questions' => 'QuestionController',
