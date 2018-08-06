@@ -69,6 +69,13 @@
                                     <a class="dropdown-item" href="{{ route('profile.create', ['user_id' => Auth::user()->id]) }}">Create Profile</a>
                                 @endif
 
+                                    @if((Auth::user()->role) == 'admin')
+                                        <a href="/admin" class="dropdown-item">Admin panel</a>
+                                    @endif
+                                    @if((Auth::user()->role) == 'superadmin')
+                                        <a href="/superadmin" class="dropdown-item">Admin panel</a>
+                                    @endif
+
 
                                 <a class="dropdown-item" href="{{ route('logout') }}"
                                    onclick="event.preventDefault();

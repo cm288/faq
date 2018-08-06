@@ -40,9 +40,10 @@
                                 <div class="card-body">{{$answer->body}}</div>
                                 <div class="card-footer">
 
-                                    <a class="btn btn-primary float-right"
-                                       href="{{ route('answers.show', ['question_id'=> $question->id,'answer_id' => $answer->id]) }}">
-                                        Save
+
+                                    <a class="btn badge-dark float-right"
+                                       href="#">
+                                        Save Question
                                     </a>
 
                                     <a class="btn btn-primary float-right"
